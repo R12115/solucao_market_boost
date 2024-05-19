@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload CSV File</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Clique aqui e encaminhe seu arquivo para iniciar as análises</h1>
+    <button onclick="openFileExplorer()">Selecionar arquivo CSV</button>
+
+    <script>
+        function openFileExplorer() {
+            var input = document.createElement('input');
+            input.type = 'file';
+            input.accept = '.csv';
+
+            input.onchange = function(event) {
+                var file = event.target.files[0];
+                if (file) {
+                    // Handle the selected CSV file here
+                    console.log("Selected file:", file.name);
+                }
+            };
+
+            input.click();
+        }
+    </script>
+
+    <div class="container">
+      <a href="homepage.html"><button class="botao">Página iniical</button></a>
+    </div>
+</body>
+</html>
+
